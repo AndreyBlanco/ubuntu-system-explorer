@@ -1,0 +1,236 @@
+{
+  "system": {
+    "os": "Ubuntu 26.04 LTS",
+    "codename": "Resolute Raccoon",
+    "kernel": "Linux 7.0.0-14-generic",
+    "kernel_type": "PREEMPT_DYNAMIC",
+    "kernel_compiled": "London, UK (Canonical)",
+    "architecture": "x86_64",
+    "hostname": "HP-Ubuntu"
+  },
+  "hardware": {
+    "cpu": "AMD E1-2100 APU",
+    "cpu_speed": "1.0 GHz dual-core",
+    "gpu": "AMD Radeon HD 8210",
+    "gpu_driver": "radeon (open source)",
+    "gpu_note": "Disabled by Windows, active in Ubuntu",
+    "ram": "8 GB",
+    "ram_usage_percent": 18,
+    "storage": "Toshiba MQ01ABD100 1TB HDD",
+    "storage_available": "921 GB",
+    "display": "1366x768",
+    "display_physical_mm": "361x203",
+    "wifi": "Realtek RTL8188EE",
+    "ethernet": "Realtek RTL810xE",
+    "bios": "InsydeH20 F.22 UEFI"
+  },
+  "desktop": {
+    "environment": "GNOME",
+    "gnome_version": "50.1",
+    "compositor": "Mutter (integrated in GNOME Shell)",
+    "display_protocol": "Wayland",
+    "wayland_socket": "wayland-0",
+    "xwayland_socket": ":0",
+    "session": "ubuntu",
+    "theme_gtk": "Yaru-blue",
+    "theme_icons": "Yaru-blue",
+    "theme_cursor": "Yaru",
+    "font_interface": "Ubuntu Sans 11pt",
+    "font_monospace": "Ubuntu Sans Mono 11pt",
+    "color_scheme": "light",
+    "dynamic_workspaces": true,
+    "button_layout": "right (minimize, maximize, close)",
+    "extensions": [
+      { "id": "ding@rastersoft.com", "name": "Desktop Icons NG" },
+      { "id": "snapd-prompting@canonical.com", "name": "Snap Permissions" },
+      { "id": "snapd-search-provider@canonical.com", "name": "Snap Search" },
+      { "id": "tiling-assistant@ubuntu.com", "name": "Tiling Assistant" },
+      { "id": "ubuntu-appindicators@ubuntu.com", "name": "App Indicators" },
+      { "id": "ubuntu-dock@ubuntu.com", "name": "Ubuntu Dock" },
+      { "id": "web-search-provider@ubuntu.com", "name": "Web Search" }
+    ]
+  },
+  "yaru": {
+    "accent_name": "blue",
+    "accent_color": "#0073E5",
+    "accent_color_optimized": "#0071E2",
+    "accent_fg_color": "#FFFFFF",
+    "dark_mode": false,
+    "gtk_versions": ["gtk-2.0", "gtk-3.0", "gtk-4.0"],
+    "available_variants": [
+      "Yaru", "Yaru-dark",
+      "Yaru-blue", "Yaru-blue-dark",
+      "Yaru-red", "Yaru-red-dark",
+      "Yaru-magenta", "Yaru-olive-dark"
+    ],
+    "css_stats": {
+      "total_lines": 5712,
+      "accent_references": 226,
+      "accent_variables": ["-st-accent-color", "-st-accent-fg-color"],
+      "color_functions": ["st-darken()", "st-lighten()", "st-mix()", "st-transparentize()"],
+      "border_radius_tokens": [
+        { "value": "999px", "uses": 49, "role": "Pills, badges, toggles" },
+        { "value": "8px",   "uses": 14, "role": "Buttons" },
+        { "value": "12px",  "uses": 13, "role": "Medium containers" },
+        { "value": "0",     "uses": 13, "role": "Hard edges, separators" },
+        { "value": "16px",  "uses": 12, "role": "App tiles, overview icons" },
+        { "value": "22px",  "uses":  6, "role": "Large containers" },
+        { "value": "36px",  "uses":  5, "role": "Dialogs, modals" },
+        { "value": "4px",   "uses":  4, "role": "Subtle details" }
+      ]
+    }
+  },
+  "packages": {
+    "apt": {
+      "total": 1634,
+      "format": "deb",
+      "repo_format": "DEB822",
+      "recent_installs": [
+        "ubuntu-restricted-addons",
+        "gstreamer1.0-plugins-bad",
+        "fastfetch",
+        "git",
+        "nodejs",
+        "npm",
+        "curl"
+      ]
+    },
+    "snap": {
+      "total": 12,
+      "snapd_version": "2.75.2",
+      "disk_usage": "4.4 GB",
+      "apps": [
+        { "name": "firefox",                  "version": "149.0.2-1", "publisher": "mozilla",    "role": "Browser" },
+        { "name": "snap-store",               "version": "0+git",     "publisher": "canonical",  "role": "App Store" },
+        { "name": "desktop-security-center",  "version": "0+git",     "publisher": "canonical",  "role": "Security" },
+        { "name": "firmware-updater",         "version": "0+git",     "publisher": "canonical",  "role": "Firmware" },
+        { "name": "prompting-client",         "version": "0+git",     "publisher": "canonical",  "role": "Permissions UI" }
+      ],
+      "bases": [
+        { "name": "bare",           "role": "Minimal base" },
+        { "name": "core24",         "role": "Ubuntu 24.04 runtime" },
+        { "name": "gnome-46-2404",  "role": "GNOME 46 libraries" },
+        { "name": "gtk-common-themes", "role": "Shared GTK themes" },
+        { "name": "mesa-2404",      "role": "GPU drivers" }
+      ]
+    },
+    "flatpak": {
+      "installed": false,
+      "reason": "Canonical strategic decision — Snap is the supported format"
+    }
+  },
+  "systemd": {
+    "active_services": 28,
+    "windows_equivalent": "80-120",
+    "key_services": [
+      { "name": "snapd",               "role": "Snap package manager" },
+      { "name": "gdm",                 "role": "GNOME Display Manager" },
+      { "name": "NetworkManager",      "role": "Network management" },
+      { "name": "wpa_supplicant",      "role": "Wi-Fi authentication" },
+      { "name": "systemd-oomd",        "role": "Out-of-memory killer" },
+      { "name": "unattended-upgrades", "role": "Automatic security updates" }
+    ]
+  },
+  "layers": [
+    {
+      "id": 0,
+      "name": "BIOS / UEFI",
+      "tech": "InsydeH20 F.22",
+      "description": "First code executed by the processor. Detects hardware, runs POST, hands control to GRUB.",
+      "details": "Secure Boot disabled to allow Ubuntu. Legacy compatibility enabled. USB 3.0 port (XHCI) configured as boot device."
+    },
+    {
+      "id": 1,
+      "name": "GRUB Bootloader",
+      "tech": "GRUB 2",
+      "description": "Loads the Linux kernel into memory. The bridge between firmware and operating system.",
+      "details": "Installed on EFI partition (FAT32, /boot/efi). Configured during Ubuntu installation. Manages kernel selection on boot."
+    },
+    {
+      "id": 2,
+      "name": "Linux Kernel",
+      "tech": "Linux 7.0.0-14-generic",
+      "description": "The core of the OS. Manages hardware, memory, processes, and drivers.",
+      "details": "PREEMPT_DYNAMIC scheduling. Compiled by Canonical in London. Loaded drivers: radeon (GPU), rtl8188ee (Wi-Fi), snd_hda_intel (audio), hp_bioscfg (HP-specific)."
+    },
+    {
+      "id": 3,
+      "name": "systemd",
+      "tech": "systemd (PID 1)",
+      "description": "System and service manager. Boots all services in parallel after the kernel.",
+      "details": "28 active services (vs 80-120 in Windows). Manages: networking, display, audio, security, package updates. Uses journal for logging."
+    },
+    {
+      "id": 4,
+      "name": "Wayland",
+      "tech": "Wayland + XWayland",
+      "description": "Display protocol. Translates between applications and the GPU.",
+      "details": "Socket: wayland-0. XWayland compatibility layer at :0 for legacy apps. Compositor: Mutter. More secure than X11 — apps cannot read each other's buffers."
+    },
+    {
+      "id": 5,
+      "name": "GNOME + Yaru",
+      "tech": "GNOME 50.1 + Yaru-blue",
+      "description": "Desktop environment and design system. Everything the user sees and touches.",
+      "details": "7 Ubuntu extensions (dock, tiling, indicators). Yaru design system: 5,712 lines CSS, 226 accent references, 2 variables controlling all color states."
+    },
+    {
+      "id": 6,
+      "name": "Packages",
+      "tech": "APT + Snap",
+      "description": "How software arrives on the machine. Two systems coexisting.",
+      "details": "APT: 1,634 packages, shared libraries, efficient. Snap: 12 packages, isolated sandboxes, 4.4 GB. Firefox published directly by Mozilla via Snap."
+    },
+    {
+      "id": 7,
+      "name": "Applications",
+      "tech": "Native + Snap apps",
+      "description": "What the user runs. The visible tip of the entire stack below.",
+      "details": "Firefox, LibreOffice, Thunderbird via Snap. Nautilus, GNOME apps via APT. Python 3.14.4 pre-installed (used by Ubuntu itself, not just users)."
+    }
+  ],
+  "design_system": {
+    "desktop": {
+      "name": "Yaru",
+      "type": "GTK Theme",
+      "language": "CSS (St toolkit)",
+      "accent_variable": "-st-accent-color",
+      "font": "Ubuntu Sans"
+    },
+    "web_legacy": {
+      "name": "Vanilla Framework",
+      "type": "CSS Framework",
+      "language": "SCSS",
+      "accent_variable": "$color-accent",
+      "font": "Ubuntu Sans"
+    },
+    "web_current": {
+      "name": "Pragma",
+      "type": "Design System",
+      "language": "Pure CSS (no preprocessor)",
+      "accent_variable": "--accent-color",
+      "font": "Ubuntu Sans",
+      "frameworks": ["React 19", "Svelte 5"],
+      "status": "Replacing Vanilla Framework"
+    },
+    "flutter": {
+      "name": "yaru.dart",
+      "type": "Flutter Theme",
+      "language": "Dart",
+      "accent_variable": "YaruVariant.blue",
+      "font": "Ubuntu Sans",
+      "base": "material.dart"
+    },
+    "shared_tokens": {
+      "accent_color": "#0073E5",
+      "accent_color_optimized": "#0071E2",
+      "font_family": "Ubuntu Sans",
+      "font_mono": "Ubuntu Sans Mono",
+      "radius_pill": "999px",
+      "radius_button": "8px",
+      "radius_card": "12px",
+      "radius_tile": "16px",
+      "radius_dialog": "36px"
+    }
+  }
+}

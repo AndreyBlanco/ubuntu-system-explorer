@@ -1,0 +1,96 @@
+/* ================================================
+   UBUNTU SYSTEM EXPLORER — Design Tokens
+   Extracted from real Ubuntu 26.04 LTS system
+   Source: Yaru theme + GNOME Shell CSS analysis
+   ================================================ */
+
+:root {
+
+  /* ── ACCENT COLORS (from Yaru index.theme) ── */
+  --accent-color:           #0073E5;
+  --accent-color-optimized: #0071E2;
+  --accent-fg-color:        #FFFFFF;
+
+  /* Derived states (matching st-darken / st-mix logic) */
+  --accent-hover:           #0068CF;
+  --accent-active:          #005DB9;
+  --accent-focus-ring:      rgba(0, 115, 229, 0.25);
+  --accent-disabled:        rgba(0, 115, 229, 0.4);
+  --accent-tint:            rgba(0, 115, 229, 0.08);
+
+  /* ── NEUTRALS (from GNOME Shell CSS #222222) ── */
+  --text-primary:           #222222;
+  --text-secondary:         #535353;
+  --text-disabled:          #999999;
+  --text-on-accent:         #FFFFFF;
+
+  --bg-primary:             #FFFFFF;
+  --bg-secondary:           #F5F5F5;
+  --bg-tertiary:            #EBEBEB;
+  --bg-overlay:             rgba(0, 0, 0, 0.05);
+
+  --border-color:           #D9D9D9;
+  --border-color-strong:    #AAAAAA;
+
+  /* ── BORDER RADIUS (from 5,712-line CSS analysis) ── */
+  /* 999px: 49 uses | 8px: 14 uses | 12px: 13 uses    */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   22px;
+  --radius-2xl:  36px;
+  --radius-pill: 999px;
+
+  /* ── TYPOGRAPHY (from gsettings + Ubuntu font family) ── */
+  --font-family:   'Ubuntu Sans', 'Ubuntu', system-ui, sans-serif;
+  --font-mono:     'Ubuntu Sans Mono', 'Ubuntu Mono', monospace;
+
+  --font-size-xs:  0.75rem;   /* 12px */
+  --font-size-sm:  0.875rem;  /* 14px */
+  --font-size-md:  1rem;      /* 16px */
+  --font-size-lg:  1.125rem;  /* 18px */
+  --font-size-xl:  1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 2rem;      /* 32px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-bold:    700;
+
+  --line-height-tight:  1.25;
+  --line-height-normal: 1.5;
+  --line-height-loose:  1.75;
+
+  /* ── SPACING (8px base system) ── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ── SHADOWS ── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  /* ── TRANSITIONS ── */
+  --transition-fast:   100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-normal: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow:   300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* ── LAYER COLORS (for the layer diagram) ── */
+  --layer-0-color: #8B5CF6;
+  --layer-1-color: #6366F1;
+  --layer-2-color: #3B82F6;
+  --layer-3-color: #0EA5E9;
+  --layer-4-color: #06B6D4;
+  --layer-5-color: #0073E5;
+  --layer-6-color: #10B981;
+  --layer-7-color: #84CC16;
+}
