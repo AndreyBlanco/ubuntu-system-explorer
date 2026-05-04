@@ -1,6 +1,7 @@
 import './styles/tokens.css'
 import systemData from './data/systemData.json'
 import type { SystemData } from './types/system'
+import { SystemOverview } from './components/SystemOverview/SystemOverview'
 
 const data = systemData as SystemData
 
@@ -59,19 +60,11 @@ function App() {
         padding: 'var(--space-8)'
       }}>
 
-        {/* SYSTEM OVERVIEW — placeholder */}
-        <section style={{
-          backgroundColor: 'var(--bg-primary)',
-          borderRadius: 'var(--radius-lg)',
-          padding: 'var(--space-6)',
-          marginBottom: 'var(--space-6)',
-          boxShadow: 'var(--shadow-sm)'
-        }}>
-          <h2 style={{ marginBottom: 'var(--space-4)' }}>System Overview</h2>
-          <p style={{ color: 'var(--text-secondary)' }}>
-            {data.system.os} — {data.hardware.cpu} — {data.hardware.ram} RAM
-          </p>
-        </section>
+        {/* SYSTEM OVERVIEW */}
+        <SystemOverview
+          system={data.system}
+          hardware={data.hardware}
+        />
 
         {/* LAYERS — placeholder */}
         <section style={{
