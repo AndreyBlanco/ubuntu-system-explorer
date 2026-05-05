@@ -2,6 +2,9 @@ import './styles/tokens.css'
 import systemData from './data/systemData.json'
 import type { SystemData } from './types/system'
 import { SystemOverview } from './components/SystemOverview/SystemOverview'
+import { LayerExplorer } from './components/LayerExplorer/LayerExplorer'
+import { DesignTokens } from './components/DesignTokens/DesignTokens';
+import { PackageEcosystem } from './components/PackageEcosystem/PackageEcosystem';
 
 const data = systemData as SystemData
 
@@ -57,7 +60,10 @@ function App() {
       <main style={{
         maxWidth: 1200,
         margin: '0 auto',
-        padding: 'var(--space-8)'
+        padding: 'var(--space-8)',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 'var(--space-6)'
       }}>
 
         {/* SYSTEM OVERVIEW */}
@@ -66,47 +72,14 @@ function App() {
           hardware={data.hardware}
         />
 
-        {/* LAYERS — placeholder */}
-        <section style={{
-          backgroundColor: 'var(--bg-primary)',
-          borderRadius: 'var(--radius-lg)',
-          padding: 'var(--space-6)',
-          marginBottom: 'var(--space-6)',
-          boxShadow: 'var(--shadow-sm)'
-        }}>
-          <h2 style={{ marginBottom: 'var(--space-4)' }}>Architecture Layers</h2>
-          <p style={{ color: 'var(--text-secondary)' }}>
-            {data.layers.length} layers from BIOS to Applications
-          </p>
-        </section>
+        {/* LAYERS +*/}
+        <LayerExplorer layers={data.layers} />
 
-        {/* DESIGN TOKENS — placeholder */}
-        <section style={{
-          backgroundColor: 'var(--bg-primary)',
-          borderRadius: 'var(--radius-lg)',
-          padding: 'var(--space-6)',
-          marginBottom: 'var(--space-6)',
-          boxShadow: 'var(--shadow-sm)'
-        }}>
-          <h2 style={{ marginBottom: 'var(--space-4)' }}>Design System Explorer</h2>
-          <p style={{ color: 'var(--text-secondary)' }}>
-            Yaru accent: <strong style={{ color: 'var(--accent-color)' }}>{data.yaru.accent_color}</strong>
-          </p>
-        </section>
+        {/* DESIGN TOKENS */}
+        <DesignTokens />
 
-        {/* PACKAGES — placeholder */}
-        <section style={{
-          backgroundColor: 'var(--bg-primary)',
-          borderRadius: 'var(--radius-lg)',
-          padding: 'var(--space-6)',
-          marginBottom: 'var(--space-6)',
-          boxShadow: 'var(--shadow-sm)'
-        }}>
-          <h2 style={{ marginBottom: 'var(--space-4)' }}>Package Ecosystem</h2>
-          <p style={{ color: 'var(--text-secondary)' }}>
-            {data.packages.apt.total} APT packages · {data.packages.snap.total} Snaps ({data.packages.snap.disk_usage})
-          </p>
-        </section>
+        {/* PACKAGES */}
+        <PackageEcosystem />
 
       </main>
 
