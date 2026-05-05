@@ -32,9 +32,9 @@ const managers: PackageManager[] = [
     updates: 'apt upgrade',
     sandbox: false,
     philosophy:
-      'El sistema tradicional. 30+ años resolviendo dependencias. Cada paquete tiene acceso completo al sistema — sin aislamiento.',
-    strength: 'Madurez, velocidad, integración profunda con el sistema',
-    limitation: 'Dependencias compartidas pueden generar conflictos',
+      'The traditional system. 30+ years resolving dependencies. Each package has full system access — no isolation.',
+    strength: 'Maturity, speed, deep system integration',
+    limitation: 'Dependencies shared between packages can generate conflicts',
     accentVar: '--layer-2-color',
   },
   {
@@ -46,9 +46,9 @@ const managers: PackageManager[] = [
     updates: 'Automáticas via snapd',
     sandbox: true,
     philosophy:
-      'La apuesta de Canonical. Autocontenido con todas sus dependencias. Funciona en cualquier distribución Linux sin modificación.',
-    strength: 'Aislamiento, actualizaciones automáticas, cross-distro',
-    limitation: 'Arranque más lento, mayor uso de disco vs APT',
+      `Canonical's bet. Self-contained with all dependencies. Works on any Linux distribution without modification.`,
+    strength: 'Isolation, automatic updates, cross-distro',
+    limitation: 'Slower startup, higher disk usage vs APT',
     accentVar: '--layer-6-color',
   },
 ];
@@ -58,43 +58,43 @@ const keyPackages: InstalledPackage[] = [
     name: 'linux-image-7.0.0-14-generic',
     version: '7.0.0-14',
     manager: 'apt',
-    purpose: 'El kernel — núcleo del sistema operativo',
-    relevance: 'Capa 2 del tour',
+    purpose: 'The kernel — core of the operating system',
+    relevance: 'Layer 2 of the tour',
   },
   {
     name: 'gnome-shell',
     version: '50.1',
     manager: 'apt',
-    purpose: 'Desktop environment completo',
-    relevance: 'Capa 5 — GNOME + Yaru',
+    purpose: 'Full desktop environment',
+    relevance: 'Layer 5 — GNOME + Yaru',
   },
   {
     name: 'yaru-theme-gtk',
     version: 'Yaru-blue',
     manager: 'apt',
-    purpose: 'Design system visual de Ubuntu',
-    relevance: 'Tokens reales en Design Tokens',
+    purpose: `Ubuntu's visual design system`,
+    relevance: 'Real tokens in Design Tokens',
   },
   {
     name: 'snapd',
     version: 'activo',
     manager: 'apt',
-    purpose: 'Daemon que gestiona paquetes Snap',
-    relevance: 'Puente entre los dos ecosistemas',
+    purpose: 'Daemon that manages Snap packages',
+    relevance: 'Bridge between both ecosystems',
   },
   {
     name: 'fastfetch',
     version: '2.x',
     manager: 'apt',
-    purpose: 'System info — primer comando del tour',
-    relevance: 'Datos reales del HP 14',
+    purpose: 'SSystem info — first command of the tour',
+    relevance: 'Real data from the HP 14',
   },
   {
     name: 'code',
     version: 'latest',
     manager: 'snap',
-    purpose: 'VS Code — donde se construye este proyecto',
-    relevance: 'Instalado via Snap Store',
+    purpose: 'VS Code — where this project is built',
+    relevance: 'Installed via Snap Store',
   },
 ];
 
@@ -110,13 +110,13 @@ export function PackageEcosystem() {
       <div className="package-ecosystem__header">
         <h2 id="packages-heading">Package Ecosystem</h2>
         <p className="package-ecosystem__subtitle">
-          Cómo llega el software a la máquina — dos sistemas coexistiendo
+          How software reaches the machine — two systems coexisting
         </p>
         <div className="package-ecosystem__total">
           <span className="pkg-total-number">
             {total.toLocaleString()}
           </span>
-          <span className="pkg-total-label">paquetes instalados en total</span>
+          <span className="pkg-total-label">packages installed total</span>
         </div>
       </div>
 
@@ -135,7 +135,7 @@ export function PackageEcosystem() {
                     className="pkg-manager-count"
                     style={{ color: `var(${mgr.accentVar})` }}
                   >
-                    {mgr.count.toLocaleString()} paquetes
+                    {mgr.count.toLocaleString()} packages
                   </span>
                 </div>
               </div>
@@ -210,8 +210,7 @@ export function PackageEcosystem() {
           Paquetes clave instalados
         </h3>
         <p className="pkg-block-description">
-          Selección real del HP 14 — conectados con las otras secciones
-          del explorador.
+          Real selection from the HP 14 — connected to the other sections of the explorer.
         </p>
 
         <div className="pkg-table" role="table" aria-label="Paquetes instalados">
@@ -244,10 +243,7 @@ export function PackageEcosystem() {
       <div className="pkg-strategic-note">
         <span className="pkg-note-icon" aria-hidden="true">💡</span>
         <p className="pkg-note-text">
-          La tensión entre APT y Snap no es un bug — es una decisión
-          estratégica de Canonical. Snap permite distribuir software
-          actualizado en cualquier versión de Ubuntu sin esperar al ciclo
-          de release. La comunidad debate; Canonical apuesta por su futuro.
+          The tension between APT and Snap is not a bug — it's a strategic decision by Canonical. Snap allows distributing updated software on any Ubuntu version without waiting for the release cycle. The community debates; Canonical bets on its future.
         </p>
       </div>
 

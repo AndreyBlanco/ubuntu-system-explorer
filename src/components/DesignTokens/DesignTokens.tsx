@@ -130,7 +130,7 @@ export function DesignTokens() {
       <div className="section-header">
         <h2 id="tokens-heading">Design Tokens</h2>
         <p className="section-subtitle">
-          Un sistema de diseño — tres medios de expresión
+          One design system — three mediums of expression
         </p>
       </div>
 
@@ -141,8 +141,8 @@ export function DesignTokens() {
           Token cross-platform
         </h3>
         <p className="block-description">
-          El mismo valor semántico implementado en GTK, CSS y Dart.
-          Pragma es el puente que mantiene la coherencia.
+          The same semantic value implemented in GTK, CSS, and Dart.
+          Pragma is the bridge that maintains coherence.
         </p>
         <div className="platform-grid">
           {platformTokens.map((p) => (
@@ -170,6 +170,7 @@ export function DesignTokens() {
                   className="swatch-block"
                   style={{ backgroundColor: '#0073E5' }}
                   aria-label="accent color swatch"
+                  tabIndex={-1}   
                 />
                 <span className="swatch-label">
                   Ubuntu Sans — The quick brown fox
@@ -194,6 +195,7 @@ export function DesignTokens() {
                 style={{ backgroundColor: token.value }}
                 role="img"
                 aria-label={`Color ${token.value}`}
+                tabIndex={-1}   
               />
               <div className="color-info">
                 <code className="color-name">--{token.name}</code>
@@ -219,8 +221,8 @@ export function DesignTokens() {
           Color derivation — accent states
         </h3>
         <p className="block-description">
-          Un token base genera todos los estados interactivos.
-          Opacity como modificador sistemático — no valores arbitrarios.
+          One base token generates all interactive states.
+          Opacity as a systematic modifier — not arbitrary values.
         </p>
         <div className="derivation-track">
           {derivationSteps.map((step, i) => (
@@ -233,6 +235,7 @@ export function DesignTokens() {
                 }}
                 role="img"
                 aria-label={`${step.label}: ${step.hex} at ${step.opacity}`}
+                tabIndex={-1}   
               />
               <div className="derivation-info">
                 <span className="derivation-label">{step.label}</span>
@@ -255,8 +258,8 @@ export function DesignTokens() {
           Border radius scale
         </h3>
         <p className="block-description">
-          Conteos reales extraídos del CSS de GNOME Shell.
-          Cada valor tiene contexto — no son arbitrarios.
+          Real counts extracted from GNOME Shell CSS.
+          Each value has context — not arbitrary.
         </p>
         <div className="radius-grid">
           {radiusTokens.map((token) => (
@@ -265,6 +268,7 @@ export function DesignTokens() {
                 className="radius-preview"
                 style={{ borderRadius: token.value === '999px' ? '999px' : token.value }}
                 aria-hidden="true"
+                tabIndex={-1}   
               />
               <div className="radius-info">
                 <code className="radius-var">{token.cssVar}</code>
