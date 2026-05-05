@@ -54,57 +54,16 @@ Types defined in `src/types/system.ts` — data flows from JSON through typed in
 
 ## Stack
 
-|
- Layer 
-|
- Technology 
-|
-|
--------
-|
------------
-|
-|
- Framework 
-|
- React 19 
-|
-|
- Language 
-|
- TypeScript 
-|
-|
- Build tool 
-|
- Vite 8 
-|
-|
- Styles 
-|
- CSS custom properties 
-|
-|
- Design tokens 
-|
- Yaru (real values from Ubuntu 26.04) 
-|
-|
- Font 
-|
- Ubuntu Sans 
-|
-|
- Deploy 
-|
- Vercel 
-|
-|
- Dev environment 
-|
- Ubuntu 26.04 LTS on HP 14 
-|
-
+| Layer | Technology |
+|-------|------------|
+| Framework | React 19 |
+| Language | TypeScript |
+| Build tool | Vite 8 |
+| Styles | CSS custom properties |
+| Design tokens | Yaru (real values from Ubuntu 26.04) |
+| Font | Ubuntu Sans |
+| Deploy | Vercel |
+| Dev environment | Ubuntu 26.04 LTS on HP 14 |
 ---
 
 ## Local setup
